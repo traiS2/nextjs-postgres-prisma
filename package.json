@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && prisma db push && next build",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
-    "seed": "ts-node scripts/seed.ts",
-    "postinstall": "npm run migrate && npm run seed"
+    "lint": "next lint"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
