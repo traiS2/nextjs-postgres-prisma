@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "vercel-build": "prisma generate && prisma migrate deploy && next build",
-    "migrate": "prisma migrate",
     "seed": "ts-node scripts/seed.ts",
     "postinstall": "npm run migrate && npm run seed"
   },
