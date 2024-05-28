@@ -17,7 +17,21 @@ async function main() {
     },
   });
 
-  console.log({ user1, user2 });
+  const account1 = await prisma.account.create({
+    data: {
+      name: 'Alice',
+      email: 'alice@example.com',
+    },
+  });
+
+  const account2 = await prisma.account.create({
+    data: {
+      name: 'Bob',
+      email: 'bob@example.com',
+    },
+  });
+
+  console.log({ user1, user2, account1, account2 });
 }
 
 main()

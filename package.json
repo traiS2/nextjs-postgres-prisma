@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "vercel-build": "prisma generate && prisma migrate deploy && next build",
-    "migrate": "prisma migrate deploy",
+    "migrate": "prisma migrate",
     "seed": "ts-node scripts/seed.ts",
     "postinstall": "npm run migrate && npm run seed"
   },
@@ -16,7 +16,6 @@
     "schema": "prisma/schema.prisma"
   },
   "dependencies": {
-    "@prisma/client": "^5.14.0",
     "@vercel/postgres": "^0.8.0",
     "next": "14.2.3",
     "prisma": "^5.14.0",
@@ -24,6 +23,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@prisma/client": "^5.14.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

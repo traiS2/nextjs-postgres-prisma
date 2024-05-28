@@ -18,3 +18,10 @@ model User {
   name  String
   email String  @unique
 }
+
+model Account {
+  id    Int     @id @default(autoincrement())
+  name  String
+  email String  @unique
+}
+
